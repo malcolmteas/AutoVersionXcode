@@ -1,3 +1,6 @@
+#   AutoVersion for Xcode, for ObjC
+#   Copyright 2015 Malcolm Teas, see https://github.com/malcolmteas/AutoVersionXcode
+
 #   This uses the Version (CFBundleShortVersionString), Build (CFBundleVersion), and Bundle
 #   Identifier fields in your project's General tab (also in the Info.plist file).
 
