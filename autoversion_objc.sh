@@ -18,7 +18,8 @@
 #   alpha, beta, or final is completely optional.
 
 #   All values are created in version.h to be used at runtime.  Some data is printed
-#   in the build log for reference as well.
+#   in the build log for reference as well.  Good practice is to let version.h be
+#   regenerated each build and to avoid storing it in your source code repository.
 
 #   Get the version, and extract the parts of it
 version=`/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "${INFOPLIST_FILE}" `

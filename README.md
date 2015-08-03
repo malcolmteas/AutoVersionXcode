@@ -1,6 +1,6 @@
 # Auto Version Script for Xcode
 
-AutoVersion is a script you put in your Xcode project's "Build Phase" to create a version file for your app.  This file contains code-readable values with your app version, name, copyright, and environmental information such as SDK and Xcode versions.  This is useful for logging or for user display.
+AutoVersion is a script you put in your Xcode project's "Build Phase" to create a version file for your app.  This file contains code-readable values with your app version, name, copyright, and environmental information such as SDK and Xcode versions.  You can use this for logging or for user display.
 
 There are two versions of this, one for Objective-C and another for Swift.  They generate equivalent output in a file named version.h (for ObjC) or version.swift (Swift).
 
@@ -28,7 +28,7 @@ COPYRIGHT_YEAR = 2015
 COPYRIGHT_NAME = Malcolm X
 </pre>
 
-These are optional.  An alternate way to handle copyright that works across multiple languages is to define a string in your strings file instead of using this.
+Alternatively, you can define these as user-defined build settings too.  Either way is equivalent, but as a separate file it's more easily updated. However, these are optional.  If you don't use them, then the eqivalent strings in the version file will be empty.  An alternate way to handle copyright that works across multiple languages is to define a string in your strings file instead of using this.
 
 ### Versions
 

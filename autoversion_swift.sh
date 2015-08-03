@@ -18,7 +18,8 @@
 #   alpha, beta, or final is completely optional.
 
 #   All values are created in version.swift to be used at runtime.  Some data is printed
-#   in the build log for reference as well.
+#   in the build log for reference as well.  Good practice is to let version.swift be
+#   regenerated each build and to avoid storing it in your source code repository.
 
 #   Get the version, and extract the parts of it.  Relies on version format as above.
 version=`/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "${INFOPLIST_FILE}" `
@@ -53,7 +54,7 @@ appID=`/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "${INFOPLIST_FILE}
 
 #  Write out the version to the console
 echo "${PRODUCT_NAME} ${fullversion} built in ${CONFIGURATION} configuration"
-echo "Build with ${SDK_NAME} with Xcode ${XCODE_VERSION_ACTUAL}. (See version.h.)"
+echo "Build with ${SDK_NAME} with Xcode ${XCODE_VERSION_ACTUAL}. (See version.swift.)"
 
 #  Write out the version.swift file
 echo "//  Application version information automatically generated at build time." > version.swift
