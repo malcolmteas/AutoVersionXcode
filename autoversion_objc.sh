@@ -2,20 +2,20 @@
 #   Copyright 2015 Malcolm Teas, see https://github.com/malcolmteas/AutoVersionXcode
 
 #   This uses the Version (CFBundleShortVersionString), Build (CFBundleVersion), and Bundle
-#   Identifier fields in your project's General tab (also in the Info.plist file).
+#   Identifier fields in your project's General tab (or in the Info.plist file).
 
-#   The copyright info comes from an Copyright.xcconfig file that's added into the
+#   The copyright info comes from a Copyright.xcconfig file that's added into the
 #   project's configurations.  The COPYRIGHT_NAME and COPYRIGHT_YEAR values could be added in
-#   any other config file.
+#   any other config file.  Alternately, you could add a user-defined build setting too.
 
 #   The version is a three digit version like 1.2.3 as in http://semver.org followed by d for
 #   development, a for alpha, or b for beta.  Release has no letter.  When you submit to the
 #   app store it will need to be as a release, no trailing letters and in Release
 #   configuration. Multiple betas, for example, can be done as 1.2.3b3 for beta 3.  This works
-#   for development or alpha versions if you use those.  Development is "not at all feature
-#   complete". Alpha is "mostly feature complete".  Beta is "feature complete, but buggy".  Some
-#   groups use a "Final" witch is for testing just pre-release.  Using development, alpha, beta
-#   final is completely optional.
+#   for development or alpha versions if you use those.  Development means "not at all feature
+#   complete". Alpha is "mostly feature complete".  Beta is "feature complete, but buggy".
+#   Some groups use a "Final" which is for testing just pre-release.  Using development,
+#   alpha, beta, or final is completely optional.
 
 #   All values are created in version.h to be used at runtime.  Some data is printed
 #   in the build log for reference as well.
