@@ -22,13 +22,13 @@ These are some notes on some ways to use the auto version scripts in your projec
 
 ### Copyright
 
-Most of the script is concerned with the app or build environment versions.  But the script also can help make the copyright available in your code.   The auto version scripts will look for `COPYRIGHT_NAME` and `COPYRIGHT_YEAR` variables in your build environment. These have to be added by you.  The can be defined in an xcconfig file as:
+Most of the script is concerned with the app or build environment versions.  But the script also can help make the copyright available in your code.   The auto version scripts will look for `COPYRIGHT_NAME` and `COPYRIGHT_YEAR` variables in your build environment. These have to be added by you.  These are user-defined build settings in your project file such as:
 <pre>
 COPYRIGHT_YEAR = 2015
 COPYRIGHT_NAME = Malcolm X
 </pre>
 
-Alternatively, you can define these as user-defined build settings too.  Either way is equivalent, but as a separate file it's more easily updated. However, these are optional.  If you don't use them, then the eqivalent strings in the version file will be empty.  An alternate way to handle copyright that works across multiple languages is to define a string in your strings file instead of using this.
+These are optional.  If you don't use them, then the eqivalent strings in the version file will be empty.  An alternate way to handle copyright that works across multiple languages is to define a string in your strings file instead of using this.
 
 ### Versions
 
