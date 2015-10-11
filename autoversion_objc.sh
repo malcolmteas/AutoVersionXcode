@@ -74,7 +74,7 @@ echo "#define Copyright = \"Copyright ${COPYRIGHT_YEAR} by ${COPYRIGHT_NAME}. Al
 echo >> version.h
 echo "//  Version information" >> version.h
 echo "#define FullVersion @\"${fullversion}\"" >> version.h
-echo "#define Version @\"${version}\"    // From Summary tab or short bundle string in plist file" >> version.h
+echo "#define Version @\"${version}\"    // From General tab or short bundle string in plist file" >> version.h
 echo "#define SimpleVersion @\"${simpleVersion}\"" >> version.h
 
 echo >> version.h

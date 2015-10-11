@@ -34,6 +34,8 @@ These are optional.  If you don't use them, then the eqivalent strings in the ve
 
 This script supports using a git code repository and using [semantic versioning](http://semver.org) version numbering.  More specifically it supports an extension of that version numbering that follows the verison with "d" for development, "a" for alpha, "b" for beta, and "f" for final.  These are all optional.  If they are used, then the script will generate a FullVersion value that looks like: `1.0.0d5-1-0B13E-dirty`.  
 
+Set the version in your plist file, set the short bundle string.  Or, the easy way is to set the version and build number in the "General" tab of your project file.
+
 In this example the app is 1.0.0 version, development version 5, build 1, with git hash `0B13E` and is dirty, ie there are code changes that are not yet checked into the repository.  This FullVersion is good for logging, but you might not way to expose it to end users in a release version.
 
 So the auto version script breaks down this FullVersion into components with the following names:

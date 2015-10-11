@@ -73,7 +73,7 @@ echo "let Copyright = \"Copyright ${COPYRIGHT_YEAR} by ${COPYRIGHT_NAME}. All ri
 echo >> version.swift
 echo "//  Version information" >> version.swift
 echo "let FullVersion = \"${fullversion}\"" >> version.swift
-echo "let Version = \"${version}\"    // From Summary tab or short bundle string in plist file" >> version.swift
+echo "let Version = \"${version}\"    // From General tab or short bundle string in plist file" >> version.swift
 echo "let SimpleVersion = \"${simpleVersion}\"" >> version.swift
 
 echo >> version.swift
