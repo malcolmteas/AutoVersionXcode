@@ -9,13 +9,13 @@
 #   and COPYRIGHT_YEAR values could be added in any other config file too.
 
 #   The version is a three digit version like 1.2.3 as in http://semver.org followed by d for
-#   development, a for alpha, or b for beta.  Release has no letter.  When you submit to the
-#   app store it will need to be as a release, no trailing letters and in Release
+#   development, a for alpha, b for beta, or f for final.  Release has no letter.  When you submit 
+#   to the app store it will need to be as a release (no trailing lettersi) and in Release
 #   configuration. Multiple betas, for example, can be done as 1.2.3b3 for beta 3.  This works
 #   for development or alpha versions if you use those.  Development is "not at all feature
 #   complete". Alpha is "mostly feature complete".  Beta is "feature complete, but buggy".  Some
-#   groups use a "Final" witch is for testing just pre-release.  Using development, alpha, beta
-#   final is completely optional.
+#   groups use a "Final" which is for testing just before release.  Using development, alpha, beta
+#   final is completely optional. Use what you like and ignore the others.
 
 #   All values are created in version.swift to be used at runtime.  Some data is printed
 #   in the build log for reference as well.
@@ -65,6 +65,7 @@ echo "//  Application information" >> "${PROJECT_DIR}/version.swift"
 echo "let ApplicationName = \"${PRODUCT_NAME}\"" >> "${PROJECT_DIR}/version.swift"
 echo "let Configuration = \"${CONFIGURATION}\"    // Configuration: Debug, Release, etc" >> "${PROJECT_DIR}/version.swift"
 
+# Copyright information is centralized as user-defined settings in your project file.
 echo >> "${PROJECT_DIR}/version.swift"
 echo "// These values are from COPYRIGHT_NAME and COPYRIGHT_YEAR which are user-defined settings in your project file" >> "${PROJECT_DIR}/version.swift"
 echo "let CopyrightName = \"${COPYRIGHT_NAME}\"" >> "${PROJECT_DIR}/version.swift"
