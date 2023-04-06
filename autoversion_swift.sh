@@ -28,17 +28,24 @@ then
     buildHash="${buildHash}(dirty)"      # Has un-committed changes.
 fi
 
+if ${Stage}
+then
+    Stage = "${Stage}-${StageNumber}"
+else
+    Stage = ""
+fi
+
 #   Assemble version information
 if [ -z "${RELEASE_TAG}" ]
 then
     releaseTag=""
 else
-    releaseTag=" ${RELEASE_TAG}"
+    releaseTag="${RELEASE_TAG}"
 fi
 buildNumber=${CURRENT_PROJECT_VERSION}
-simpleVersion="${MARKETING_VERSION}${releaseTag}"
-version="${MARKETING_VERSION} (${buildNumber})${releaseTag}"
-fullVersion="${MARKETING_VERSION} (${buildNumber})${releaseTag} ${buildHash}"
+simpleVersion="${MARKETING_VERSION} ${releaseTag}"
+version="${MARKETING_VERSION} (${buildNumber}) ${releaseTag}"
+fullVersion="${MARKETING_VERSION} (${buildNumber}) ${releaseTag} ${buildHash}"
 
 if [ ! -z $CopyrightUpdating ]
 then
